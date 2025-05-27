@@ -1,0 +1,205 @@
+[
+  {
+    "name": "Mandarin",
+    "note": "Top",
+    "fragrance_families": ["citrus", "fruity", "sweet"],
+    "allergens": ["Limonene"],
+    "effects": ["uplifting", "calming"]
+  },
+  {
+    "name": "Frankincense",
+    "note": "Base",
+    "fragrance_families": ["resinous", "woody", "balsamic"],
+    "allergens": [],
+    "effects": ["grounding", "meditative"]
+  },
+  {
+    "name": "Eucalyptus globulus",
+    "note": "Top",
+    "fragrance_families": ["fresh", "herbal"],
+    "allergens": ["Limonene"],
+    "effects": ["refreshing", "clearing"]
+  },
+  {
+    "name": "Jasmine absolute 4%",
+    "note": "Heart",
+    "fragrance_families": ["floral", "sweet"],
+    "allergens": ["Benzyl benzoate", "Linalool"],
+    "effects": ["sensual", "uplifting"]
+  },
+  {
+    "name": "Bergamot",
+    "note": "Top",
+    "fragrance_families": ["citrus", "fresh", "green"],
+    "allergens": ["Limonene", "Linalool", "Citral"],
+    "effects": ["uplifting", "balancing"]
+  },
+  {
+    "name": "Citronella",
+    "note": "Top",
+    "fragrance_families": ["citrus", "grassy", "herbal"],
+    "allergens": ["Citral", "Geraniol"],
+    "effects": ["repelling", "refreshing"]
+  },
+  {
+    "name": "Lemongrass",
+    "note": "Top",
+    "fragrance_families": ["citrus", "herbal"],
+    "allergens": ["Citral", "Geraniol", "Limonene"],
+    "effects": ["energizing", "cleansing"]
+  },
+  {
+    "name": "Rosemary",
+    "note": "Top",
+    "fragrance_families": ["herbal"],
+    "allergens": ["Limonene", "Linalool"],
+    "effects": ["stimulating", "concentration"]
+  },
+  {
+    "name": "Oakmoss absolute 60%",
+    "note": "Base",
+    "fragrance_families": ["earthy", "woody", "mossy"],
+    "allergens": ["Atranol", "Chloroatranol"],
+    "effects": ["grounding", "deepening"]
+  },
+  {
+    "name": "Ylang Ylang",
+    "note": "Heart",
+    "fragrance_families": ["floral", "sweet"],
+    "allergens": ["Benzyl benzoate", "Linalool"],
+    "effects": ["relaxing", "sensual"]
+  },
+  {
+    "name": "Benzoin Siam",
+    "note": "Base",
+    "fragrance_families": ["balsamic", "sweet"],
+    "allergens": [],
+    "effects": ["comforting", "warming"]
+  },
+  {
+    "name": "Neroli",
+    "note": "Top",
+    "fragrance_families": ["floral", "citrus", "green"],
+    "allergens": ["Linalool", "Limonene"],
+    "effects": ["uplifting", "soothing"]
+  },
+  {
+    "name": "Sandalwood",
+    "note": "Base",
+    "fragrance_families": ["woody"],
+    "allergens": [],
+    "effects": ["meditative", "calming"]
+  },
+  {
+    "name": "Lemon",
+    "note": "Top",
+    "fragrance_families": ["citrus", "fresh"],
+    "allergens": ["Limonene", "Citral"],
+    "effects": ["energizing", "cleansing"]
+  },
+  {
+    "name": "Black Pepper",
+    "note": "Middle",
+    "fragrance_families": ["spicy", "woody"],
+    "allergens": [],
+    "effects": ["stimulating", "warming"]
+  },
+  {
+    "name": "Lavender fine",
+    "note": "Middle",
+    "fragrance_families": ["floral", "herbal"],
+    "allergens": ["Linalool", "Limonene"],
+    "effects": ["calming", "balancing"]
+  },
+  {
+    "name": "Vetiver",
+    "note": "Base",
+    "fragrance_families": ["earthy", "woody", "smoky"],
+    "allergens": [],
+    "effects": ["grounding", "stabilizing"]
+  },
+  {
+    "name": "Patchouli",
+    "note": "Base",
+    "fragrance_families": ["earthy", "woody", "sweet"],
+    "allergens": [],
+    "effects": ["relaxing", "sensual"]
+  },
+  {
+    "name": "Blood Orange",
+    "note": "Top",
+    "fragrance_families": ["citrus", "sweet", "fruity"],
+    "allergens": ["Limonene"],
+    "effects": ["uplifting", "refreshing"]
+  },
+  {
+    "name": "Cypress",
+    "note": "Middle",
+    "fragrance_families": ["woody", "fresh"],
+    "allergens": ["Limonene"],
+    "effects": ["cleansing", "centering"]
+  },
+  {
+    "name": "Cardamom",
+    "note": "Top",
+    "fragrance_families": ["spicy", "sweet"],
+    "allergens": ["Linalool"],
+    "effects": ["uplifting", "comforting"]
+  },
+  {
+    "name": "Green Grape",
+    "note": "Top",
+    "fragrance_families": ["fruity", "fresh", "green"],
+    "allergens": [],
+    "effects": ["refreshing", "stimulating"]
+  },
+  {
+    "name": "Clove stem",
+    "note": "Base",
+    "fragrance_families": ["spicy"],
+    "allergens": ["Eugenol"],
+    "effects": ["warming", "stimulating"]
+  },
+  {
+    "name": "Lavandin",
+    "note": "Top",
+    "fragrance_families": ["floral", "herbal"],
+    "allergens": ["Linalool", "Limonene"],
+    "effects": ["balancing", "cleansing"]
+  },
+  {
+    "name": "Verbena grasse",
+    "note": "Top",
+    "fragrance_families": ["citrus", "green"],
+    "allergens": ["Citral"],
+    "effects": ["mood-lifting", "invigorating"]
+  },
+  {
+    "name": "Tonkabean 30%",
+    "note": "Base",
+    "fragrance_families": ["sweet", "balsamic"],
+    "allergens": [],
+    "effects": ["comforting", "soothing"]
+  },
+  {
+    "name": "Vanilla extract",
+    "note": "Base",
+    "fragrance_families": ["sweet", "gourmand"],
+    "allergens": [],
+    "effects": ["comforting", "calming"]
+  },
+  {
+    "name": "Sweet Orange",
+    "note": "Top",
+    "fragrance_families": ["citrus", "sweet"],
+    "allergens": ["Limonene"],
+    "effects": ["uplifting", "relaxing"]
+  },
+  {
+    "name": "Geranium",
+    "note": "Middle",
+    "fragrance_families": ["floral", "green"],
+    "allergens": ["Citronellol", "Geraniol", "Linalool"],
+    "effects": ["balancing", "uplifting"]
+  }
+]
