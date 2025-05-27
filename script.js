@@ -1,7 +1,7 @@
- const inputsToDisable = document.querySelectorAll('#note, input[type=checkbox]');
+const inputsToDisable = document.querySelectorAll('#note, input[type=checkbox]');
 const formSubmitBtn = document.querySelector('#submit-btn');
 const nameInput = document.querySelector('#name');
-const searchOutput = document.querySelector('search-output');
+const searchOutput = document.querySelector('#search-output');
 
 function disableInput(event){
     if(event.target.value){
@@ -10,18 +10,20 @@ function disableInput(event){
         inputsToDisable.forEach(input => input.removeAttribute('disabled', 'true'));
     }
 }
+nameInput.addEventListener('input', disableInput);
 
-function retrieveFilterData(event){
-    event.preventDefault();
+function retrieveFilterData(){
     const formData = document.querySelector('#essential-oil-filter');
     const oilFilter = new FormData(formData);
     const name = oilFilter.get('name');
     const note = oilFilter.get('note');
-    const fragrances = oilFilter.getAll('frag')
-    const allergens = oilFilter.getAll('allergen')
+    const fragrances = oilFilter.getAll('frag');
+    const allergens = oilFilter.getAll('allergen');
+    return name;
 }
 
-const fetchEssentialOilData = async () => {
+const fetchEssentialOilData = async (event) => {
+    event.preventDefault();
     try {
         const response = await fetch('essential-oil.json');
         if (!response.ok) {
@@ -38,13 +40,24 @@ const fetchEssentialOilData = async () => {
 };
 
 function showData(input){
+    const dataToSearchFor = retrieveFilterData();
     input.forEach(input => {
-        return input.name.includes('Mand')
-        ? console.log(input.name, input.fragrance_families)
-        : console.log('noop');
+        if(input.name.includes(dataToSearchFor)){
+            searchOutput.innerHTML += `
+            <h1>${input.name}</h1>
+            <p>${input.note}</p>
+            <p>${input.fragrance_families}</p>
+            `
+        }
     })
 }
 
-formSubmitBtn.addEventListener('click', retrieveFilterData);
-nameInput.addEventListener('input', disableInput);
-//fetchEssentialOilData();
+function deleteData(){
+    searchOutput.innerHTML = "";
+}
+
+formSubmitBtn.addEventListener('click', (event) => {
+    deleteData();
+    fetchEssentialOilData(event);
+
+});
