@@ -1,3 +1,4 @@
+const formSubmitBtn = document.querySelector('#submit-btn');
 const searchOutput = document.querySelector('search-output');
 
 const fetchEssentialOilData = async () => {
@@ -25,4 +26,16 @@ function showData(input){
 
 }
 
-fetchEssentialOilData();
+function retrieveFilterData(event){
+    event.preventDefault();
+    const formData = document.querySelector('#essential-oil-filter');
+    const oilFilter = new FormData(formData);
+    const name = oilFilter.get('name');
+    const note = oilFilter.get('note');
+    const fragrances = oilFilter.getAll('frag')
+    const allergens = oilFilter.getAll('allergen')
+    console.log(name, note, fragrances, allergens);
+}
+
+formSubmitBtn.addEventListener('click', retrieveFilterData)
+//fetchEssentialOilData();
