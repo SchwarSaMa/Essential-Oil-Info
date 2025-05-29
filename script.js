@@ -30,7 +30,7 @@ const fetchEssentialOilData = async (event) => {
             throw new Error(`Response status: ${response.status}`);
           }
         const essentialOilData = await response.json();
-        showData(essentialOilData);
+        renderData(essentialOilData);
 
     }
     catch (error) {
@@ -39,38 +39,42 @@ const fetchEssentialOilData = async (event) => {
     }
 };
 
-function showData(input){
+function renderData(input){
     const [oilName, fragNote, fragrance] = retrieveFilterData();
     input.forEach(input => {
         if(input.name.includes(oilName) && oilName){
-            searchOutput.innerHTML += `
-            <h1>${input.name}</h1>
-            <p>${input.note}</p>
-            <p>${input.fragrance_families}</p>
-            `
-        } else if(input.note === fragNote){
-            searchOutput.innerHTML += `
-            <h1>${input.name}</h1>
-            <p>${input.note}</p>
-            <p>${input.fragrance_families}</p>
-            `
-        } else if(fragrance){
+            createInfoCard(input);
+
+        } else if(input.note === fragNote && fragrance.length === 0){
+            createInfoCard(input);
+
+        } else if(fragrance.length > 0 && !fragNote){
             for(let i = 0; i < fragrance.length; i++){
                 if(input.fragrance_families.includes(fragrance[i])){
-                    searchOutput.innerHTML += `
-                    <h1>${input.name}</h1>
-                    <p>${input.note}</p>
-                    <p>${input.fragrance_families}</p>
-                    `
+                    createInfoCard(input);
                     return true;
                 }
             } 
+        }else if(fragNote && fragrance.length > 0){
+            for(let i = 0; i < fragrance.length; i++){
+                if(input.fragrance_families.includes(fragrance[i]) && input.note === fragNote){
+                    createInfoCard(input);
+                    return true;
+                }
+            }
         }
     })
 }
 
 function deleteData(){
     searchOutput.innerHTML = "";
+}
+
+function createInfoCard(input){
+    searchOutput.innerHTML += `
+        <h1>${input.name}</h1>
+        <p>${input.note}</p>
+        <p>${input.fragrance_families}</p>`
 }
 
 formSubmitBtn.addEventListener('click', (event) => {
