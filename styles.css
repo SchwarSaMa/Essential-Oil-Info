@@ -11,7 +11,7 @@ form, #search-output{
 }
 
 /* Filter (form)*/
-form, #name, #note, #submit-btn{
+form, #name, #note, #submit-btn, .collapsible{
     font-size: 1.1rem;
 }
 
@@ -20,9 +20,8 @@ fieldset, #name, #note{
 }
 
 fieldset{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px 5px 10px 0;
+    border: none;
+    
 }
 
 fieldset input{
@@ -69,6 +68,26 @@ fieldset input:checked + label{
     padding: 5px;
 }
 
+/*Collapsible*/
+.collapsible{
+    width: 100%;
+    text-align: left;
+}
+
+.content{
+    display: none;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px 5px 5px 0;
+}
+
+.active{
+    display: flex;
+}
+
+
+/*Media Queries*/
 @media only screen and (max-width: 700px){
     #search-output{
         grid-template-columns: repeat(2, 1fr);

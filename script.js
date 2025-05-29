@@ -1,5 +1,6 @@
 const inputsToDisable = document.querySelectorAll('#note, input[type=checkbox]');
 const formSubmitBtn = document.querySelector('#submit-btn');
+const collapsibleBtn = document.querySelectorAll('.collapsible');
 const nameInput = document.querySelector('#name');
 const searchOutput = document.querySelector('#search-output');
 
@@ -84,5 +85,9 @@ function createInfoCard(input){
 formSubmitBtn.addEventListener('click', (event) => {
     deleteData();
     fetchEssentialOilData(event);
-
 });
+
+collapsibleBtn.forEach(button => button.addEventListener('click', (event) => {
+    const content = event.target.parentElement.nextElementSibling;
+    content.classList.toggle('active');
+}));
