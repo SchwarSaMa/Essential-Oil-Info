@@ -45,3 +45,16 @@ fieldset input:checked + label{
 #submit-btn{
     width: 100%;
 }
+
+/*Results*/
+#search-output{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.oil-info{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}

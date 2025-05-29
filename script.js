@@ -72,9 +72,11 @@ function deleteData(){
 
 function createInfoCard(input){
     searchOutput.innerHTML += `
-        <h1>${input.name}</h1>
-        <p>${input.note}</p>
-        <p>${input.fragrance_families}</p>`
+        <div class="oil-info">
+            <h1>${input.name}</h1>
+            <p>${input.note}</p>
+            <p>${input.fragrance_families}</p>
+        </div>`
 }
 
 formSubmitBtn.addEventListener('click', (event) => {
