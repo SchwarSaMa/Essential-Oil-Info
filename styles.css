@@ -1,0 +1,47 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form, #search-output{
+    padding: 15px;
+}
+
+/* Filter (form)*/
+form, #name, #note, #submit-btn{
+    font-size: 1.1rem;
+}
+
+fieldset, #name, #note{
+    margin-bottom: 10px;
+}
+
+fieldset{
+    padding: 10px 5px 10px 0;
+}
+
+fieldset input{
+    visibility: hidden;
+    /*display: none;*/
+}
+
+fieldset label{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+fieldset input:focus + label{
+    outline: 1px solid blue;
+}
+
+fieldset input:checked + label{
+    background-color: rgb(131, 199, 165);
+}
+
+#submit-btn{
+    width: 100%;
+}
