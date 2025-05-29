@@ -19,7 +19,7 @@ function retrieveFilterData(){
     const note = oilFilter.get('note');
     const fragrances = oilFilter.getAll('frag');
     const allergens = oilFilter.getAll('allergen');
-    return name;
+    return [name, note, fragrances];
 }
 
 const fetchEssentialOilData = async (event) => {
@@ -40,14 +40,31 @@ const fetchEssentialOilData = async (event) => {
 };
 
 function showData(input){
-    const dataToSearchFor = retrieveFilterData();
+    const [oilName, fragNote, fragrance] = retrieveFilterData();
     input.forEach(input => {
-        if(input.name.includes(dataToSearchFor)){
+        if(input.name.includes(oilName) && oilName){
             searchOutput.innerHTML += `
             <h1>${input.name}</h1>
             <p>${input.note}</p>
             <p>${input.fragrance_families}</p>
             `
+        } else if(input.note === fragNote){
+            searchOutput.innerHTML += `
+            <h1>${input.name}</h1>
+            <p>${input.note}</p>
+            <p>${input.fragrance_families}</p>
+            `
+        } else if(fragrance){
+            for(let i = 0; i < fragrance.length; i++){
+                if(input.fragrance_families.includes(fragrance[i])){
+                    searchOutput.innerHTML += `
+                    <h1>${input.name}</h1>
+                    <p>${input.note}</p>
+                    <p>${input.fragrance_families}</p>
+                    `
+                    return true;
+                }
+            } 
         }
     })
 }
