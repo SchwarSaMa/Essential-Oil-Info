@@ -21,7 +21,6 @@ fieldset, #name, #note{
 
 fieldset{
     border: none;
-    
 }
 
 fieldset input{
@@ -34,6 +33,7 @@ fieldset label{
     padding: 2px;
     margin: 5px;
     text-wrap: nowrap;
+    height: fit-content;
 }
 
 fieldset input:focus + label{
@@ -75,17 +75,14 @@ fieldset input:checked + label{
 }
 
 .content{
-    display: none;
-    flex-wrap: wrap;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px 5px 5px 0;
-}
-
-.active{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /*Slide animation*/
+    overflow: hidden;
+    height: 0;
+    transition: height 0.4s ease;
 }
-
 
 /*Media Queries*/
 @media only screen and (max-width: 700px){
