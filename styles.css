@@ -7,6 +7,7 @@
 }
 
 form, #search-output{
+    width: 100vw;
     padding: 15px;
 }
 
@@ -59,13 +60,37 @@ fieldset input:checked + label{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    max-width: 100vw;
 }
 
 .oil-info{
+    display: flex;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.oil-info .top, .oil-info .heart, .oil-info .base{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
     padding: 5px;
+    width: 20%;
+    min-width: fit-content;
+    border-radius: 10px 0 0 10px;
+    font-size: 1.5rem;
+}
+
+.oil-info .top{
+    background-color: rgb(234, 164, 176);
+}
+
+.oil-info .heart{
+    background-color: rgb(255, 191, 71);
+}
+
+.oil-info .base{
+    background-color: rgb(43, 104, 56);
+    color: white;
 }
 
 /*Collapsible*/
@@ -84,14 +109,16 @@ fieldset input:checked + label{
     transition: height 0.4s ease;
 }
 
+/*Icons*/
+
 /*Media Queries*/
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 900px){
     #search-output{
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 600px){
     #search-output{
         grid-template-columns: repeat(1, 1fr);
     }
