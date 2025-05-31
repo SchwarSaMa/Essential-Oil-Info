@@ -68,7 +68,7 @@ fieldset input:checked + label{
     border-radius: 10px;
 }
 
-.oil-info .top, .oil-info .heart, .oil-info .base{
+.top, .heart, .base{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,18 +80,37 @@ fieldset input:checked + label{
     font-size: 1.5rem;
 }
 
-.oil-info .top{
+.top{
     background-color: rgb(234, 164, 176);
 }
 
-.oil-info .heart{
+.heart{
     background-color: rgb(255, 191, 71);
 }
 
-.oil-info .base{
+.base{
     background-color: rgb(43, 104, 56);
     color: white;
 }
+
+.allergens{
+    color: rgb(186, 29, 29);
+}
+
+summary::marker{
+    content: "";
+}
+
+summary::after{
+    content: "+";
+    float: right;
+}
+
+details[open] summary::after{
+    content: "-";
+    float: right;
+}
+
 
 /*Collapsible*/
 .collapsible{

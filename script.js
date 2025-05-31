@@ -76,10 +76,16 @@ function createInfoCard(input){
         <div class="oil-info">
             <div class="${input.note.toLowerCase()}"><p>${input.note}</p></div>
             <div>
-                <h1>${input.name}</h1>
                 <p>${input.fragrance_families}</p>
+                <h1>${input.name}</h1>
+                <details>
+                <summary>Effects</summary>
                 <p>${input.effects}</p>
+                </details>
+                <details class="allergens">
+                <summary>Allergens</summary>
                 <p>${input.allergens}</p>
+                </details>
             </div>
         </div>`
 }
