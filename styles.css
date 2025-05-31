@@ -11,6 +11,10 @@ form, #search-output{
     padding: 15px;
 }
 
+.space-right{
+    margin-right: 5px;
+}
+
 /* Filter (form)*/
 form, #name, #note, #submit-btn, .collapsible{
     font-size: 1.1rem;
@@ -62,7 +66,7 @@ fieldset input:checked + label{
     gap: 30px;
 }
 
-.oil-info{
+.oil-card{
     display: flex;
     border: 1px solid black;
     border-radius: 10px;
@@ -91,6 +95,15 @@ fieldset input:checked + label{
 .base{
     background-color: rgb(43, 104, 56);
     color: white;
+}
+
+.oil-info{
+    width: 100%;
+    padding: 2px 10px 2px 0;
+}
+
+details{
+    cursor: pointer;
 }
 
 .allergens{

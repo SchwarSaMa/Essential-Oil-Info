@@ -73,17 +73,17 @@ function deleteData(){
 
 function createInfoCard(input){
     searchOutput.innerHTML += `
-        <div class="oil-info">
+        <div class="oil-card">
             <div class="${input.note.toLowerCase()}"><p>${input.note}</p></div>
-            <div>
+            <div class="oil-info">
                 <p>${input.fragrance_families}</p>
                 <h1>${input.name}</h1>
                 <details>
-                <summary>Effects</summary>
+                <summary><i class="fa-solid fa-star-of-life space-right"></i>Effects</summary>
                 <p>${input.effects}</p>
                 </details>
                 <details class="allergens">
-                <summary>Allergens</summary>
+                <summary><i class="fa-solid fa-skull space-right"></i>Allergens</summary>
                 <p>${input.allergens}</p>
                 </details>
             </div>
