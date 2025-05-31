@@ -96,7 +96,7 @@ formSubmitBtn.addEventListener('click', (event) => {
 });
 
 collapsibleBtn.forEach(button => button.addEventListener('click', (event) => {
-    const content = event.target.parentElement.nextElementSibling;
+    const content = event.currentTarget.nextElementSibling;
     content.classList.toggle('active');
     content.classList.contains('active')
     ? content.style.height = content.scrollHeight + "px"
